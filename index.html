@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CHCCc App</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7">
+        <meta name="author" content="Peter Oyelegbin">
+        <meta name="description" content="A web app consisting of a calculator, Body Mass Index, Counter, and Color changer app.">
+        <meta name="keywords" content="Calculator, Body Mass Index, Counter, Color Changer, OYETEK, MoonLight">
+        <meta name="copyright" content="2021">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+	</head>
+	<body>
+		<main class="main">
+			<header role="banner">
+				<!-- Tabs -->
+				<nav>
+					<li class="tab-btn active" data-id="calculator">Calculator</li>
+					<li class="tab-btn" data-id="health">Health</li>
+					<li class="tab-btn" data-id="counter">Counter</li>
+					<li class="tab-btn" data-id="color">Color</li>
+				</nav>
+			</header>
+
+			<!-- Basic Calculator App -->
+			<div class="content active" id="calculator">
+				<h1>Basic Calculator</h1>
+				<div class="container">
+					<!-- display section -->
+					<div id="display"></div>
+					<!-- buttons section -->
+					<div class="buttons">
+						<div class="button">(</div>
+						<div class="button">)</div>
+						<div class="button func">&larr;</div>
+						<div class="button func">/</div>
+						<div class="button">7</div>
+						<div class="button">8</div>
+						<div class="button">9</div>
+						<div class="button func">*</div>
+						<div class="button">4</div>
+						<div class="button">5</div>
+						<div class="button">6</div>
+						<div class="button func">-</div>
+						<div class="button">1</div>
+						<div class="button">2</div>
+						<div class="button">3</div>
+						<div class="button func">+</div>
+						<div class="button">.</div>
+						<div class="button">0</div>
+						<div id="clear" class="button">C</div>
+						<div id="equal" class="button">=</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Body Mass Index App -->
+			<div class="content" id="health">
+            	<h1>Body Mass Index</h1>
+				<form class="container" onsubmit="return false;">
+					<label for="height">Height:</label>
+					<input type="number" name="height" id="height" placeholder="Height in meter" required>
+					<label for="weight">Weight</label>
+					<input type="number" name="weight" id="weight" placeholder="Weight in kilogram" required>
+					<button type="submit" id="evalute">SUBMIT</button>
+				</form>
+            </div>
+
+
+			<!-- Counter App -->
+			<div class="content" id="counter">
+            	<h1>Counter App</h1>
+				<span id="value">0</span>
+				<div class="button-container">
+					<button class="btn decrease">decrease</button>
+					<button class="btn increase">increase</button>
+					<button class="btn reset">reset</button>
+				</div>
+            </div>
+
+
+			<!-- Color Changer App -->
+			<div class="content" id="color">
+            	<h1>Color Changer</h1>
+				<div class="container">
+					<h2>Background Color : <span class="color">#f1f5f8</span></h2>
+					<button class="btn-hero" id="btn">CHANGE</button>
+            	</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer>
+			<p>&copy; 2021 MoonLight Production :: All Rights Reserved. <a href="https://oyetek.herokuapp.com" target=_blank>OYETEK</a></p>
+		</footer>
+
+		<!-- JavaScript -->
+		<script src="app.js"></script>
+	</body>
+</html>
